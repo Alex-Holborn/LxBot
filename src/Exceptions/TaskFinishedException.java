@@ -3,22 +3,10 @@ package Exceptions;
 import Tasks.LxTask;
 import main.Main;
 
-public class TaskFinishedException extends Exception {
+public class TaskFinishedException extends LxCeption {
 
-    private LxTask thrownTask;
-    private String message;
 
-    public TaskFinishedException(Main m, LxTask t, String mssg){
-        super();
-        thrownTask = t;
-        message = mssg;
-    }
-
-    public LxTask getThrownTask(){
-        return thrownTask;
-    }
-
-    public String getMessage(){
-        return message;
+    public TaskFinishedException(Main m, LxTask t, String mssg) {
+        super(m, t, mssg);
     }
 }
